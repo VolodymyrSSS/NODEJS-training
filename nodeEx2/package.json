@@ -1,0 +1,14 @@
+{
+  "name": "nodeex2",
+  "version": "1.0.0",
+  "description": "using built in modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Volodymyr",
+  "license": "ISC"
+}
