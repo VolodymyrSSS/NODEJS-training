@@ -39,7 +39,7 @@ module.exports = () => {
         query
       } = url.parse(request.url, true)
       if (request.method === 'POST') { // content=abc123&filename=book.txt
-        fs.writeFileSync(query.filename, query.content, 'utf8')
+        fs.writeFileSync(`./files/${query.filename}`, query.content, 'utf8')
       } else {
         fs.readFile(`./files/${pathname}`, (err, content) => {
           if (err) {
@@ -51,9 +51,9 @@ module.exports = () => {
           }
 
           response.writeHead(200, {
-            'Content-type': 'application/json'
+            'Content-type': 'text/html'
           })
-          response.end(JSON.stringify(logs))
+          response.end(content)
         })
       }
     }).listen(8080)
