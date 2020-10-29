@@ -1,0 +1,51 @@
+{
+  "sample": true,
+  "name": "My color list",
+  "description": "A list of main colors",
+  "colorList": [
+    {
+      "color": "red",
+      "hex": "#FF0000"
+    },
+    {
+      "color": "brown-red",
+      "hex": "#E74C3C"
+    },
+    {
+      "color": "violet",
+      "hex": "#8E44AD"
+    },
+    {
+      "color": "bluish-violet",
+      "hex": "#3498DB"
+    },
+    {
+      "color": "blue",
+      "hex": "#0000FF"
+    },
+    {
+      "color": "greenish-blue",
+      "hex": "#27AE60"
+    },
+    {
+      "color": "green",
+      "hex": "#00FF00"
+    },
+    {
+      "color": "yellow",
+      "hex": "#F1C40F"
+    },
+    {
+      "color": "brown",
+      "hex": "#D35400"
+    },
+    {
+      "color": "grey",
+      "hex": "#BDC3C7"
+    },
+    {
+      "color": "indigo", 
+      "hex": "#2C3E50"
+    }
+  ]
+}
