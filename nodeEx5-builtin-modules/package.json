@@ -1,0 +1,22 @@
+{
+  "name": "nodeex3",
+  "version": "1.0.0",
+  "description": "NodeJS exercise",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Volodymyr Sych <nescoton69@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
