@@ -4,7 +4,11 @@
   "description": "Sample of REST-API for web site",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon --ignore feedback.json server.js"
+  },
+  "rules": {
+    "import/newline-after-import": ["error", { "count": 2 }]
   },
   "keywords": [
     "nodejs",
@@ -13,6 +17,16 @@
   "author": "Volodymyr Sych",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2"
   }
 }
