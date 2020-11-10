@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const cookieSession = require('cookie-session');
 
 const FeedbackService = require('./services/FeedbackService');
 const SpeakerService = require('./services/SpeakerService');
@@ -16,6 +17,15 @@ const PORT = process.env.PORT || 3000;
 // to command Express to use ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
+
+// make Express to trust cookie being past through a reverse proxy
+app.set('trust proxy', 1);
+
+// to add cookie-session middleware to a lifecycle
+app.use(cookieSession({
+  name: 'session',
+  keys: ['G444gggWWW673ql', 'n999fffNNN431Pu'], 
+}));
 
 // apply a middleware to look express into a static folder
 app.use(express.static(path.join(__dirname, './static')));
@@ -52,3 +62,6 @@ app.listen(PORT, () => {
 
 // template engine install; site https://ejs.co/
 // npm install ejs
+
+// to install cookie-session
+// npm install cookie-session
