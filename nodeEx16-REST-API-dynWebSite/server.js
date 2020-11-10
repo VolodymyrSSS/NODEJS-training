@@ -1,6 +1,12 @@
 const express = require('express');
 const path = require('path');
 
+const FeedbackService = require('./services/FeedbackService');
+const SpeakerService = require('./services/SpeakerService');
+
+const feedbackService = new FeedbackService('./data/feedback.json');
+const speakersService = new SpeakerService('./data/speakers.json');
+
 const routes = require('./routes');
 
 const app = express();
@@ -23,7 +29,10 @@ app.use(express.static(path.join(__dirname, './static')));
 //   response.sendFile(path.join(__dirname, './static/speakers.html'));
 // });
 
-app.use('/', routes());
+app.use('/', routes({
+  feedbackService,
+  speakersService
+}));
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
